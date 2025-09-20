@@ -12,8 +12,16 @@ export default {
         "2xl": "1400px",
       },
     },
-    extend: {
-      colors: {
+      extend: {
+        fontFamily: {
+          'dyslexic': ['OpenDyslexic', 'Arial', 'sans-serif'],
+        },
+        backgroundImage: {
+          'gradient-primary': 'var(--gradient-primary)',
+          'gradient-wellbeing': 'var(--gradient-wellbeing)', 
+          'gradient-accessibility': 'var(--gradient-accessibility)',
+        },
+        colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,6 +64,18 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        wellbeing: {
+          DEFAULT: "hsl(var(--wellbeing))",
+          foreground: "hsl(var(--wellbeing-foreground))",
+        },
+        mindfulness: {
+          DEFAULT: "hsl(var(--mindfulness))",
+          foreground: "hsl(var(--mindfulness-foreground))",
+        },
+        accessibility: {
+          DEFAULT: "hsl(var(--accessibility))",
+          foreground: "hsl(var(--accessibility-foreground))",
         },
       },
       borderRadius: {
