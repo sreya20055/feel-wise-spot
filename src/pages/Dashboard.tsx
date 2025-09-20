@@ -1,7 +1,7 @@
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, BookOpen, TrendingUp, User, LogOut } from 'lucide-react';
+import { Heart, BookOpen, TrendingUp, User, LogOut, MessageCircle, Users, Trophy, Eye, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
@@ -167,6 +167,130 @@ export default function Dashboard() {
               <Link to="/courses">
                 <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
                   Browse Courses
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+        </div>
+
+        {/* Secondary Quick Actions */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mb-8">
+          <Card className="bg-gradient-accessibility text-accessibility-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MessageCircle className="h-5 w-5" />
+                AI Companion
+              </CardTitle>
+              <CardDescription className="text-accessibility-foreground/80">
+                Chat with Sage, your personal wellbeing AI companion with voice support
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/ai-companion">
+                <Button 
+                  variant="secondary" 
+                  className="bg-white/20 hover:bg-white/30 text-white border-white/20"
+                  onClick={() => {
+                    console.log('🔍 "Chat with Sage" button clicked - navigating to /ai-companion');
+                  }}
+                >
+                  Chat with Sage
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-wellbeing text-wellbeing-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5" />
+                Personal Journal
+              </CardTitle>
+              <CardDescription className="text-wellbeing-foreground/80">
+                Write reflective entries with AI feedback and voice-to-text support
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/journal">
+                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                  Write Entry
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-mindfulness text-mindfulness-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                Community
+              </CardTitle>
+              <CardDescription className="text-mindfulness-foreground/80">
+                Connect with peers in a safe, moderated forum with AI-powered support
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/community">
+                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                  Join Community
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-primary text-primary-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Trophy className="h-5 w-5" />
+                Progress
+              </CardTitle>
+              <CardDescription className="text-primary-foreground/80">
+                Track achievements and view your wellbeing journey progress
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/progress">
+                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                  View Progress
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-accessibility text-accessibility-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Eye className="h-5 w-5" />
+                Accessibility
+              </CardTitle>
+              <CardDescription className="text-accessibility-foreground/80">
+                Web overlay tools and accessibility transformation features
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/accessibility">
+                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                  Accessibility Tools
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-mindfulness text-mindfulness-foreground">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BarChart3 className="h-5 w-5" />
+                Analytics
+              </CardTitle>
+              <CardDescription className="text-mindfulness-foreground/80">
+                View insights, trends, and personalized wellbeing reports
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link to="/analytics">
+                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                  View Analytics
                 </Button>
               </Link>
             </CardContent>
