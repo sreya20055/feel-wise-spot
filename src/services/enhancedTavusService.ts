@@ -3,10 +3,10 @@
 
 import { tavusCleanup } from '@/utils/tavusCleanup';
 
-const TAVUS_API_KEY = '571bcfabda964c6ba5f776f147e95d35';
+const TAVUS_API_KEY = 'ef76f07cb19f49a1b31f7d93fd91147b';
 const TAVUS_BASE_URL = 'https://tavusapi.com';
-const TAVUS_REPLICA_ID = 'rf4703150052'; // Charlie - confirmed working
-const TAVUS_PERSONA_ID = 'p2c3a9b144e4';
+const TAVUS_REPLICA_ID = 'r6ca16dbe104'; // Updated replica
+const TAVUS_PERSONA_ID = 'p001ef02050e';
 
 interface TavusConversationRequest {
   replica_id: string;
@@ -54,7 +54,7 @@ export class EnhancedTavusService {
       'x-api-key': TAVUS_API_KEY,
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'User-Agent': 'FeelWise-AI-Companion/1.0',
+      'User-Agent': 'BlindSpot-AI-Companion/1.0',
     };
   }
 
@@ -74,7 +74,7 @@ export class EnhancedTavusService {
     const conversationRequest: TavusConversationRequest = {
       replica_id: TAVUS_REPLICA_ID,
       persona_id: TAVUS_PERSONA_ID,
-      conversation_name: `FeelWise-Wellbeing-${Date.now()}`,
+      conversation_name: `BlindSpot-Wellbeing-${Date.now()}`,
       custom_greeting: greeting,
       properties: {
         max_call_duration: 3600, // 1 hour

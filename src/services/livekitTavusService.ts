@@ -1,10 +1,10 @@
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant } from 'livekit-client';
 
 // Configuration for Tavus with LiveKit
-const TAVUS_API_KEY = '571bcfabda964c6ba5f776f147e95d35';
+const TAVUS_API_KEY = 'ef76f07cb19f49a1b31f7d93fd91147b';
 const TAVUS_BASE_URL = 'https://tavusapi.com';
-const TAVUS_REPLICA_ID = 'rf4703150052'; // Charlie - confirmed working
-const TAVUS_PERSONA_ID = 'p2c3a9b144e4';
+const TAVUS_REPLICA_ID = 'r6ca16dbe104'; // Updated replica
+const TAVUS_PERSONA_ID = 'p001ef02050e';
 
 // LiveKit server configuration (you'll need to set up a LiveKit server)
 const LIVEKIT_URL = 'wss://feelwise-livekit.livekit.cloud'; // Replace with your LiveKit server
@@ -44,7 +44,7 @@ export class LiveKitTavusService {
     const conversationRequest: TavusConversationRequest = {
       replica_id: TAVUS_REPLICA_ID,
       persona_id: TAVUS_PERSONA_ID,
-      conversation_name: `FeelWise-${Date.now()}`,
+      conversation_name: `BlindSpot-${Date.now()}`,
       enable_livekit: true,
       livekit_url: LIVEKIT_URL,
     };

@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 // Updated API key and credentials
-const TAVUS_API_KEY = '571bcfabda964c6ba5f776f147e95d35';
+const TAVUS_API_KEY = 'ef76f07cb19f49a1b31f7d93fd91147b';
 const TAVUS_BASE_URL = 'https://tavusapi.com';
 // CORS proxy for browser requests (fallback)
 const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
 
-// Configured Tavus IDs for FeelWise Spot
-const TAVUS_PERSONA_ID = 'p2c3a9b144e4';
-const TAVUS_REPLICA_ID = 'rf4703150052'; // Charlie - confirmed working
+// Configured Tavus IDs for BlindSpot
+const TAVUS_PERSONA_ID = 'p001ef02050e';
+const TAVUS_REPLICA_ID = 'r6ca16dbe104'; // Updated replica
 
 interface TavusConversationRequest {
   persona_id?: string;
@@ -44,7 +44,7 @@ export class TavusService {
       'x-api-key': this.apiKey,
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'User-Agent': 'FeelWise-Browser-Client/1.0',
+      'User-Agent': 'BlindSpot-Browser-Client/1.0',
       // Add CORS-friendly headers
     };
   }

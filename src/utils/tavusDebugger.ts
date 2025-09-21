@@ -1,10 +1,10 @@
 // Tavus API Debugger - Systematic debugging utility
 // This helps identify the exact cause of 400 Bad Request errors
 
-const TAVUS_API_KEY = '571bcfabda964c6ba5f776f147e95d35';
+const TAVUS_API_KEY = 'ef76f07cb19f49a1b31f7d93fd91147b';
 const TAVUS_BASE_URL = 'https://tavusapi.com';
-const TAVUS_REPLICA_ID = 'rf4703150052';
-const TAVUS_PERSONA_ID = 'p2c3a9b144e4';
+const TAVUS_REPLICA_ID = 'r6ca16dbe104';
+const TAVUS_PERSONA_ID = 'p001ef02050e';
 
 interface DebugResult {
   success: boolean;
@@ -42,7 +42,7 @@ export class TavusDebugger {
       'x-api-key': TAVUS_API_KEY,
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'User-Agent': 'FeelWise-Debug/1.0',
+      'User-Agent': 'BlindSpot-Debug/1.0',
       ...customHeaders
     };
 
