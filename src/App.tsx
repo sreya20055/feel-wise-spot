@@ -23,6 +23,7 @@ import Community from "./pages/Community";
 import Progress from "./pages/Progress";
 import Accessibility from "./pages/Accessibility";
 import Analytics from "./pages/Analytics";
+import FontTest from "./pages/FontTest";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/progress" element={<Progress />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/analytics" element={<Analytics />} />
+              <Route path="/font-test" element={<FontTest />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

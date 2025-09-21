@@ -55,7 +55,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
+      <header className="border-b bg-white/95 backdrop-blur-md sticky top-0 z-40 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <Heart className="h-6 w-6 text-primary" />
@@ -146,7 +146,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/mood">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   Log Mood
                 </Button>
               </Link>
@@ -165,7 +165,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/courses">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   Browse Courses
                 </Button>
               </Link>
@@ -190,7 +190,7 @@ export default function Dashboard() {
               <Link to="/ai-companion">
                 <Button 
                   variant="secondary" 
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/20"
+                  className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold"
                   onClick={() => {
                     console.log('🔍 "Chat with Sage" button clicked - navigating to /ai-companion');
                   }}
@@ -213,7 +213,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/journal">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   Write Entry
                 </Button>
               </Link>
@@ -232,7 +232,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/community">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   Join Community
                 </Button>
               </Link>
@@ -251,7 +251,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/progress">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   View Progress
                 </Button>
               </Link>
@@ -270,7 +270,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/accessibility">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   Accessibility Tools
                 </Button>
               </Link>
@@ -289,7 +289,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardContent>
               <Link to="/analytics">
-                <Button variant="secondary" className="bg-white/20 hover:bg-white/30 text-white border-white/20">
+                <Button variant="secondary" className="bg-white/90 hover:bg-white text-black border-white/20 font-semibold">
                   View Analytics
                 </Button>
               </Link>

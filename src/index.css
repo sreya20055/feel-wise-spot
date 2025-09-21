@@ -121,6 +121,259 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* High Contrast Mode for Accessibility */
+.high-contrast {
+  /* Override CSS variables for maximum contrast */
+  --background: 0 0% 0%;           /* Pure black background */
+  --foreground: 0 0% 100%;         /* Pure white text */
+  
+  --card: 0 0% 5%;                /* Very dark cards */
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  
+  --primary: 60 100% 50%;          /* High contrast yellow */
+  --primary-foreground: 0 0% 0%;
+  
+  --secondary: 0 0% 15%;           /* Dark secondary */
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 0 0% 10%;               /* Very dark muted */
+  --muted-foreground: 0 0% 85%;
+  
+  --accent: 200 100% 50%;          /* High contrast cyan */
+  --accent-foreground: 0 0% 0%;
+  
+  --destructive: 0 100% 50%;       /* Pure red for errors */
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 0 0% 30%;              /* Visible borders */
+  --input: 0 0% 10%;
+  --ring: 60 100% 50%;
+  
+  /* High contrast custom colors */
+  --wellbeing: 180 100% 50%;       /* Bright cyan */
+  --wellbeing-foreground: 0 0% 0%;
+  
+  --mindfulness: 280 100% 50%;     /* Bright purple */
+  --mindfulness-foreground: 0 0% 0%;
+  
+  --accessibility: 120 100% 50%;   /* Bright green */
+  --accessibility-foreground: 0 0% 0%;
+  
+  /* Override gradients for high contrast */
+  --gradient-primary: linear-gradient(135deg, hsl(60 100% 50%), hsl(200 100% 50%));
+  --gradient-wellbeing: linear-gradient(135deg, hsl(180 100% 50%), hsl(60 100% 50%));
+  --gradient-accessibility: linear-gradient(135deg, hsl(120 100% 50%), hsl(180 100% 50%));
+}
+
+/* High contrast mode specific overrides */
+.high-contrast {
+  /* Force high contrast on all text elements */
+  color: white !important;
+  background-color: black;
+  
+  /* Enhanced focus indicators */
+  *:focus {
+    outline: 3px solid yellow !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* High contrast buttons */
+  button {
+    border: 2px solid white !important;
+  }
+  
+  /* High contrast links */
+  a {
+    color: yellow !important;
+    text-decoration: underline !important;
+  }
+  
+  a:visited {
+    color: cyan !important;
+  }
+  
+  /* High contrast form elements */
+  input, textarea, select {
+    background-color: black !important;
+    color: white !important;
+    border: 2px solid white !important;
+  }
+  
+  /* High contrast images - add border for definition */
+  img {
+    border: 1px solid white;
+  }
+  
+  /* Override any transparent backgrounds */
+  .bg-transparent {
+    background-color: black !important;
+  }
+  
+  /* High contrast for cards and containers */
+  
+.high-contrast .bg-card,
+.high-contrast .bg-popover,
+.high-contrast .bg-background {
+  background-color: black !important;
+  color: white !important;
+}
+
+  /* Ensure muted text is still readable */
+  .text-muted-foreground {
+    color: #cccccc !important;
+  }
+  
+  /* High contrast for primary actions */
+  .bg-primary {
+    background-color: yellow !important;
+    color: black !important;
+  }
+  
+  /* High contrast for secondary actions */
+  .bg-secondary {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  /* High contrast for accent elements */
+  .bg-accent {
+    background-color: cyan !important;
+    color: black !important;
+  }
+  
+  /* High contrast for wellbeing elements */
+  .bg-wellbeing,
+  .text-wellbeing {
+    background-color: cyan !important;
+    color: black !important;
+  }
+  
+  /* High contrast for accessibility elements */
+  .bg-accessibility,
+  .text-accessibility {
+    background-color: lime !important;
+    color: black !important;
+  }
+  
+  /* High contrast for mindfulness elements */
+  .bg-mindfulness,
+  .text-mindfulness {
+    background-color: magenta !important;
+    color: black !important;
+  }
+  
+  /* Remove subtle shadows and effects that reduce contrast */
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+  
+  /* High contrast borders */
+  .border {
+    border-color: white !important;
+  }
+  
+  /* High contrast dividers */
+  .border-b,
+  .border-t,
+  .border-l,
+  .border-r {
+    border-color: white !important;
+  }
+  
+  /* High contrast for specific components */
+  .bg-muted {
+    background-color: #333333 !important;
+    color: white !important;
+  }
+  
+  .bg-muted\/50 {
+    background-color: #1a1a1a !important;
+    color: white !important;
+  }
+  
+  /* High contrast for tabs */
+  [data-state="active"] {
+    background-color: yellow !important;
+    color: black !important;
+  }
+  
+  /* High contrast for badges */
+  .bg-secondary {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+  
+  /* High contrast for tooltips and popovers */
+  [data-radix-popper-content-wrapper] {
+    background-color: black !important;
+    color: white !important;
+    border: 2px solid white !important;
+  }
+  
+  /* High contrast for dropdown menus */
+  [role="menu"],
+  [role="menuitem"] {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+  }
+  
+  /* High contrast for selected items */
+  [aria-selected="true"],
+  [data-selected] {
+    background-color: yellow !important;
+    color: black !important;
+  }
+  
+  /* High contrast for hover states */
+  button:hover,
+  [role="button"]:hover {
+    background-color: yellow !important;
+    color: black !important;
+  }
+  
+  /* High contrast for disabled elements */
+  :disabled {
+    background-color: #666666 !important;
+    color: #cccccc !important;
+    border-color: #999999 !important;
+  }
+  
+  /* Ensure SVG icons are visible */
+  svg {
+    color: inherit !important;
+  }
+  
+  /* High contrast for code blocks */
+  code,
+  pre {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border: 1px solid white !important;
+  }
+  
+  /* High contrast for tables */
+  table,
+  th,
+  td {
+    border-color: white !important;
+  }
+  
+  th {
+    background-color: #333333 !important;
+    color: white !important;
   }
 }
